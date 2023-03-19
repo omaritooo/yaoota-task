@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+
 import { storeToRefs } from "pinia";
 import { usePostStore } from "../stores/posts";
 import axios from "axios";
 import { useUserStore } from "../stores/users";
-import AboutView from "../views/AboutView.vue";
+import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       beforeEnter: (to, from, next) => {
         const postStore = usePostStore();
         const userStore = useUserStore();
@@ -21,7 +21,7 @@ const router = createRouter({
         getUsers();
         next();
       },
-      component: () => import("../views/AboutView.vue"),
+      component: () => import("../views/HomeView.vue"),
     },
     {
       path: `/post/:id`,
@@ -34,7 +34,6 @@ const router = createRouter({
         const { users } = usersStore;
         const { getPost, getComments, post } = postStore;
         getComments(to.params.id);
-
         next();
       },
       beforeRouteUpdate(to, from) {
