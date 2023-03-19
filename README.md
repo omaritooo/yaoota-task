@@ -1,41 +1,76 @@
 # yaoota-task
 
-This template should help get you started developing with Vue 3 in Vite.
+## Table of contents
+* [General info](#general-info)
+* [Setup](#setup)
+* [Technologies](#technologies)
+* [Features](#features)
 
-## Recommended IDE Setup
+## General Info
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+This project is a task for Yaoota! This task relies on the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/).
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The task aims to focus on the following: 
 
-## Project Setup
+* Fetching all posts
+* Filtering and sorting through them
+* Displaying single posts
+* Testing the web app
+
+
+
+## Setup
+
 
 ```sh
 npm install
-```
+
 
 ### Compile and Hot-Reload for Development
 
-```sh
+
 npm run dev
-```
+
 
 ### Compile and Minify for Production
 
-```sh
+
 npm run build
-```
+
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```sh
+
 npm run test:unit
-```
+
 
 ### Lint with [ESLint](https://eslint.org/)
 
-```sh
+
 npm run lint
 ```
+
+
+### Technologies
+
+
+* Tailwind
+* Vite
+* Vue 3
+* Vitest
+* Pinia
+
+
+
+### Features
+
+
+* Filtering through posts by user
+* Searching through posts
+* Pagination
+* Limiting the amount of posts per page
+* Displaying the comment of each post
+* Adding your own comment
+
+
